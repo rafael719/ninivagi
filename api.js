@@ -5,6 +5,10 @@ const mongoose = require("mongoose");
 const app = express();
 app.use(express.json());
 
+
+// F1F: Diese Anwendung ist für den Betrieb mit einem MongoDB Replica Set vorbereitet.
+// Beispiel für eine Replica Set URI (siehe replica-setup/README-replica.md):
+// MONGODB_URI=mongodb://localhost:27017,localhost:27018,localhost:27019/deinedb?replicaSet=rs0
 const uri = process.env.MONGODB_URI;
 console.log("Connecting to MongoDB:", uri);
 
